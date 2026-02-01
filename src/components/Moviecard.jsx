@@ -2,19 +2,19 @@ import "../css/Moviecard.css";
 import { useMovieContext } from "../context/MovieContext";
 
 export function MovieCard({ movie }) {
-  const { isFavorite, addToFavorites, removeFormFavorites } = useMovieContext();
+  const { isFavorite, addToFavorites, removeFromFavorites } = useMovieContext(); // fixed here
   const favorite = isFavorite(movie.id);
 
   function onFavoriteClick(e) {
     e.preventDefault();
-    if (favorite) removeFormFavorites(movie.id);
+    if (favorite)
+      removeFromFavorites(movie.id); // fixed here
     else addToFavorites(movie);
   }
 
   return (
     <div className="movie-card">
       <div className="movie-poster">
-        {/* <img src={movie.url} alt={movie.title} /> */}
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           alt={movie.title}
