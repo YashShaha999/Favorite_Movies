@@ -1,19 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../css/Navbar.css";
 
 function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <Link to="/">Movie App</Link>
+        <Link to="/">🍿 CineVerse</Link>
       </div>
       <div className="navbar-links">
-        <Link to="/" className="nav-link">
+        <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>
           Home
-        </Link>
-        <Link to="/favorites" className="nav-link">
+        </NavLink>
+        <NavLink to="/favorites" className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}>
           Favorites
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );
