@@ -1,0 +1,223 @@
+.home {
+  padding: 0 0 3rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, rgba(229, 9, 20, 0.9) 0%, rgba(20, 20, 20, 1) 100%),
+              url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: #ccc;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Search Form */
+.search-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.85rem 2.5rem 0.85rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.search-input:focus {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: #e50914;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.3);
+}
+
+.search-clear-btn {
+  position: absolute;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease;
+}
+
+.search-clear-btn:hover {
+  color: #fff;
+}
+
+.search-button {
+  padding: 0.85rem 2rem;
+  background: linear-gradient(90deg, #e50914, #ff3838);
+  color: white;
+  border-radius: 30px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+  transition: all 0.2s ease;
+}
+
+.search-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(229, 9, 20, 0.6);
+}
+
+.search-button:active {
+  transform: translateY(0);
+}
+
+/* Category Tabs */
+.category-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  padding: 0 1rem;
+}
+
+.category-tabs {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 6px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 4px;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.tab-btn {
+  background: transparent;
+  color: #aaa;
+  border: none;
+  padding: 8px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: transparent;
+}
+
+.tab-btn.active {
+  background: #e50914;
+  color: white;
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+}
+
+.tab-btn.active:hover {
+  background: #e50914;
+}
+
+/* Movies Grid */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Empty search state */
+.no-results {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.no-results h2 {
+  font-size: 1.75rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.no-results p {
+  color: #777;
+}
+
+.error-message {
+  text-align: center;
+  color: #ff4d4d;
+  background-color: rgba(255, 77, 77, 0.1);
+  border: 1px solid rgba(255, 77, 77, 0.2);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0 auto 2rem;
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .search-form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .movies-grid {
+    padding: 0 1rem;
+    gap: 1.25rem;
+  }
+}
